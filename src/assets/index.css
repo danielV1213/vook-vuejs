@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+.fontSerrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.rounded-div {
+    @apply border rounded-xl shadow-xl bg-[#ffffff] max-w-[1050px] w-[90vw] mx-auto overflow-auto
+}
