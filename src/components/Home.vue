@@ -56,11 +56,11 @@ export default {
                     <form v-on:submit="fetchBooks"
                         class="flex justify-between items-center w-full m-3 p-3 bg-transparent border-4 border-gray-300 text-white rounded-2xl">
                         <div>
-                            <input class="bg-transparent border-none text-white focus:outline-none text-2xl" type="text"
+                            <input class="bg-transparent border-none text-white focus:outline-none text-xl" type="text"
                                 placeholder="Buscar libro" v-on:change="handleChangeBook">
                         </div>
                         <button v-on:click="fetchBooks"><font-awesome-icon icon="fa-solid fa-magnifying-glass"
-                                class="text-3xl" /></button>
+                                class="text-xl" /></button>
                     </form>
                 </div>
 
@@ -78,8 +78,8 @@ export default {
                             <tr v-for="book in info"
                                 class="border-b-[1px] border-[#dddddd] border-solid overflow-hidden">
                                 <td class="py-[12px] px-[15px]">{{ book.title }}</td>
-                                <td class="py-[12px] px-[15px]">{{ book.author_name }}</td>
-                                <td class="py-[12px] px-[15px]">{{ book.publish_year }}</td>
+                                <td class="py-[12px] px-[15px]">{{ book.author_name?.toString() }}</td>
+                                <td class="py-[12px] px-[15px]">{{ book.publish_year?.toString() }}</td>
                             </tr>
                         </tbody>
                     </table>
